@@ -1,0 +1,9 @@
+<li title="{{localize "joinCombat.navigation.toggle"}}" class="control-tool toggle {{#if this.active}}active{{/if}}">
+    <i class="fas fa-fist-raised"></i>
+</li>
+{{#if this.sameRoundCompatible}}
+<li title="{{#if this.active}}{{localize "joinCombat.navigation.toggleSameRound"}}{{else}}{{localize "joinCombat.navigation.toggleSameRoundDisabled"}}{{/if}}"
+    class="control-tool toggle {{#if this.joinSameRound}}active{{/if}} {{#unless this.active}}disabled{{/unless}}">
+    <i class="far fa-clock"></i>
+</li>
+{{/if}}

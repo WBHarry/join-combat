@@ -1,0 +1,9 @@
+{
+    "joinCombat": {
+        "navigation": {
+            "toggle": "Toggle Join Combat",
+            "toggleSameRound": "Toggle Join Same Round",
+            "toggleSameRoundDisabled": "Join Combat needs to be enabled"
+        }
+    }
+}

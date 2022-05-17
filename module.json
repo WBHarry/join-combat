@@ -1,0 +1,25 @@
+{
+    "name": "join-combat",
+    "title": "Join Combat",
+    "description": "If the toggle is checked, tokens placed by the DM will automatically be added to combat and roll initiative.",
+    "author": "HarryBoy",
+    "esmodules": [
+        "scripts/join-combat.js"
+    ],
+    "styles": ["styles/join-combat.css"],
+    "languages": [
+      {
+        "lang": "en",
+        "name": "English",
+        "path": "lang/en.json"
+      }
+    ],
+    "dependencies": [],
+    "system": [],
+    "version": "1.0.0",
+    "minimumCoreVersion": "8",
+    "compatibleCoreVersion":"9",
+    "url": "https://github.com/WBHarry/join-combat",
+    "manifest": "https://github.com/WBHarry/join-combat/releases/latest/download/module.json",
+    "download": "https://github.com/WBHarry/join-combat/releases/latest/download/module.zip"
+  }

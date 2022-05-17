@@ -1,0 +1,17 @@
+
+.disabled {
+  opacity: 0.5;
+}
+
+#controls ol.control-tools > li.disabled {
+  border-color: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: none;
+  cursor: default;
+}
+
+#controls ol.control-tools > li.disabled:hover {
+  background: rgba(0, 0, 0, 0.5);
+  color: rgb(201, 199, 184);
+  box-shadow: none;
+}
