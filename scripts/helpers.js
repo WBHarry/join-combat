@@ -11,19 +11,17 @@ export const getInitiativeOptions = () => {
         return {};
     }
 
-    const lowestInitiative = game.combat.data.combatants.reduce((acc, c) => {
-        if(acc === null){
-            return c.data.initiative ? c : null;
-        }
-
-        return acc.data.initiative > c.data.initiative ? c : acc;
-    }, null)?.data?.initiative;
-    
-    if(!lowestInitiative){
+    const currentCombatantId = game.combat.current.combatantId;
+    if(!currentCombatantId){
         return {};
     }
 
-    const dice = Math.max(lowestInitiative-1, 0);
+    const currentInitiative = game.combat.data.combatants.find(x => x.id === currentCombatantId)?.data?.initiative;
+    if(currentInitiative === undefined){
+        return {};
+    }
+
+    const dice = Math.max(currentInitiative-1, 0);
 
     return { formula: dice ? `1d${dice}` : '0' };
 }

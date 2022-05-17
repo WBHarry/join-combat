@@ -1,25 +1,6 @@
-import { getInitiativeOptions, isSystemSameRoundCompatible } from './helpers.js';
+import { isSystemSameRoundCompatible } from './helpers.js';
 
-Hooks.once('init', () => {
-    game.settings.register('join-combat', 'active', {
-        name: 'Join Combat Active',
-        hint: 'Roll Initiative for new tokens or not',
-        scope: 'world',
-        default: false,
-        config: false,
-        type: Boolean,
-    });
-    game.settings.register('join-combat', 'join-same-round', {
-        name: 'Same Round',
-        hint: '',
-        scope: 'world',
-        default: false,
-        config: false,
-        type: Boolean,
-    });
-});
-
-Hooks.on('renderSceneControls', async (controls, html) => {
+export const renderSceneControls = async (html) => {
     if(game.user.isGM){
         const tokenSublist = $(html).find('ol.sub-controls').first();
         tokenSublist.append(await renderTemplate('modules/join-combat/templates/TokenButtons.hbs', {
@@ -57,12 +38,4 @@ Hooks.on('renderSceneControls', async (controls, html) => {
             }
         });
     }
-});
-
-Hooks.on('createToken', (document, _, userId) => {
-    const dmCreated = game.user.isGM && game.user.id === userId;
-    const activeCombat = Boolean(game.combat);
-    if(activeCombat && dmCreated && game.settings.get('join-combat', 'active')){
-        document.actor.rollInitiative({createCombatants: true, initiativeOptions: getInitiativeOptions()});
-    }
-});
+};

@@ -4,7 +4,7 @@
     "description": "If the toggle is checked, tokens placed by the DM will automatically be added to combat and roll initiative.",
     "author": "HarryBoy",
     "esmodules": [
-        "scripts/join-combat.js"
+        "join-combat.js"
     ],
     "styles": ["styles/join-combat.css"],
     "languages": [
