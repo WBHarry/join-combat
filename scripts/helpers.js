@@ -16,7 +16,7 @@ export const getInitiativeOptions = () => {
         return {};
     }
 
-    const currentInitiative = game.combat.data.combatants.find(x => x.id === currentCombatantId)?.data?.initiative;
+    const currentInitiative = game.combat.combatants.find(x => x.id === currentCombatantId)?.initiative;
     if(currentInitiative === undefined){
         return {};
     }
