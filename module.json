@@ -1,5 +1,6 @@
 {
     "id": "join-combat",
+    "name": "join-combat",
     "title": "Join Combat",
     "description": "If the toggle is checked, tokens placed by the DM will automatically be added to combat and roll initiative.",
     "version": "1.1.0",
@@ -13,6 +14,7 @@
       "verified": "10.276",
       "maximum": 10
     },
+    "minimumCoreVersion": 10,
     "esmodules": [
         "join-combat.js"
     ],
